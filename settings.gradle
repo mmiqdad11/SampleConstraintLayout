@@ -1,0 +1,2 @@
+rootProject.name='Sample Constraint Layout'
+include ':app'
