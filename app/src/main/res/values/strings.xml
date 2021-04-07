@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Sample Constraint Layout</string>
+    <string name="exercise">Exercise 1</string>
     <string name="tEmail">Email</string>
     <string name="tPassword">Password</string>
     <string name="bsignin">Sign-In</string>
@@ -22,5 +23,17 @@
     <string name="nama">Nama</string>
     <string name="notel">Nomor Telepon</string>
     <string name="namaitem">Item</string>
-
+    <string name="Regis">Belum Terdaftar?</string>
+    <string name="Pendaftaran">Pendaftaran</string>
+    <string name="jKelamin">Jenis Kelamin</string>
+    <string name="laki">Laki - Laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="agama">Agama</string>
+    <string name="islam">Islam</string>
+    <string name="kristen">Kristen</string>
+    <string name="katolik">Katolik</string>
+    <string name="hindu">Hindu</string>
+    <string name="buddha">Buddha</string>
+    <string name="konghucu">Konghucu</string>
+    <string name="pKepercayaan">Penganut Kepercayaan</string>
 </resources>

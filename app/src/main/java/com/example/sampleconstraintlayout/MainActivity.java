@@ -11,7 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     EditText edemail, edpassword;
 
     String nama, password;
+
+    TextView regis;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -48,6 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
         edpassword = findViewById(R.id.edPassword);
 
+        regis = findViewById(R.id.regis);
+
+        regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), FormRegister.class);
+
+                startActivity(i);
+
+            }
+        });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
                 String email = "admin@mail.com";
 
                 String pass = "123";
-
-
-
+                if (!validateEmail() | !validatePassword()) {
+                    return;
+                }
                 if(nama.equals(email) && password.equals(pass)) {
                     Toast t = Toast.makeText(getApplicationContext(), "Login Sukses",
                             Toast.LENGTH_LONG);
@@ -88,5 +106,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private boolean validateEmail() {
+        String emailInput = edemail.getEditableText().toString().trim();
+
+        if (emailInput.isEmpty()) {
+            edemail.setError("Email tidak boleh kosong!");
+            return false;
+        } else {
+            edemail.setError(null);
+            return true;
+        }
+    }
+    private boolean validatePassword() {
+        String emailInput = edpassword.getEditableText().toString().trim();
+
+        if (emailInput.isEmpty()) {
+            edpassword.setError("Password tidak boleh kosong!");
+            return false;
+        } else {
+            edpassword.setError(null);
+            return true;
+        }
     }
 }

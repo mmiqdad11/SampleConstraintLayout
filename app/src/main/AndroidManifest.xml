@@ -5,14 +5,19 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/exercise"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityLihatData"
-            android:parentActivityName=".Home_Activity"></activity>
-        <activity android:name=".Home_Activity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".FormRegister"
+            android:parentActivityName=".Home_Activity" />
+        <activity
+            android:name=".ActivityLihatData"
+            android:parentActivityName=".Home_Activity" />
+        <activity
+            android:name=".Home_Activity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".formPendaftaran"
             android:parentActivityName=".MainActivity" />
