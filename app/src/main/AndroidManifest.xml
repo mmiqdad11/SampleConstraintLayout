@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".FormRegister"
-            android:parentActivityName=".Home_Activity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ActivityLihatData"
             android:parentActivityName=".Home_Activity" />
